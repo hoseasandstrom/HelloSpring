@@ -3,5 +3,20 @@
 {{#person}}
 {{name}} is from {{city}} and is {{age}} years old.
 {{/person}}
+
+{{^user}}
+<form action="login" method="post">
+      <input type="text" name="username" placeholder="Enter your username"/>
+<button type="submit">Login</button>
+</form>
+{{/user}}
+
+{{#user}}
+Hello {{name}}!
+{{/user}}
+<form action="/logout" method="post">
+    <button type="submit">Logout</button>
+</form>
+<br>
 </body>
 </html>
